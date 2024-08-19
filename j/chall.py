@@ -9,7 +9,7 @@ def evaluateExpression(exp: str):
     numBrackets = exp.split(" ")[0].find(')')   # Count the number of closing brackets in component of the expression 
     if (numBrackets > -1):                      # If there are any, replace them all. 
                                                 # i.e. the expression: 200) -1000) would be split into ['200)', '-1000)']
-                                                # we would remove the bracket from '200)' > so that we can parse it and return the remaining expression
+                                                # we would remove the bracket from '200)' > '200' so that we can parse it and return the remaining expression
       exp = exp.replace(')', '', numBrackets)
     arr = exp.split(' ')
     return [float(arr[0]), ' '.join(arr[1::])]  # Parses the first index in the expression and returns the rest
