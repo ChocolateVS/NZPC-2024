@@ -6,13 +6,10 @@ def evaluateExpression(exp: str):
     else:
       raise Exception                           # If the expression doesn't have a bracket it's an integer
   except:                                       # Handle integer expression
-    numBrackets = exp.split(" ")[0].find(')')   # Count the number of closing brackets in component of the expression 
-    if (numBrackets > -1):                      # If there are any, replace them all. 
-                                                # i.e. the expression: 200) -1000) would be split into ['200)', '-1000)']
-                                                # we would remove the bracket from '200)' > '200' so that we can parse it and return the remaining expression
-      exp = exp.replace(')', '', numBrackets)
-    arr = exp.split(' ')
-    return [float(arr[0]), ' '.join(arr[1::])]  # Parses the first index in the expression and returns the rest
+    arr = exp.split(' ')                            # Count the number of closing brackets in component of the expression, If there are any, replace them all.  
+    if (arr[0].find(')') > -1):                     # i.e. the expression: 200) -1000) would be split into ['200)', '-1000)']
+      exp = exp.replace(')', '', arr[0].find(')'))  # we would remove the bracket from '200)' > '200' so that we can parse it and return the remaining expression
+    return [float(exp.split(' ')[0]), ' '.join(exp.split(' ')[1::])]  # Parses the first index in the expression and returns the rest
   
                                                 # Here means we are in a snaggle expression (not an integer)
   [p, exp] = evaluateExpression(exp)            # Will parse p from the expression (we can guarantee this part of the expression is integer p)
