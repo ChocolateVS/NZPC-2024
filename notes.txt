@@ -1,0 +1,19 @@
+A:   3 points;  10min;
+B:   3 points;  14min;
+C:   3 points;  12min;
+D:   3 points;   9min;
+E:  10 points;  12min;
+F:  10 points;  18min;
+G:  10 points;   6min;
+H:  10 points;  19min;
+I:  30 points;
+J:  30 points;
+K:  30 points;
+L:  30 points;
+M: 100 points;
+N: 100 points;
+O: 100 points;
+P: 100 points;
+
+Total for 3 points: 45min (45 / 300)
+Total for 10 points: 55min (100 / 300)
