@@ -20,3 +20,13 @@ Perhaps a better strategy would've been to focus on the first challenge in the m
 We've learnt it's not worth the overhead in understanding, writing & debugging the easy challenges despite the code being trivial to write.
 
 During the comp, we solved A, E, F, G, and K, but spent the majority of our time on challenges P and L
+
+### Requirements
+
+- Python > 3.11 (probably any python 3 version i haven't tested tho)
+
+## Running the challenge scripts
+
+Replace 'challenge' with the challenge letter i.e. `a`
+
+`cat .\challenge\sample-challenge.1.in | python .\challenge\chall.py`
